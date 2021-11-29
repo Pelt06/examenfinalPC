@@ -1,10 +1,11 @@
+<h1>Cursos:</h1>
 {% extends 'estudiantes/base.html' %}
 {% block content %}
     {% for curso in cursos %}
         <div class="post">
             <ul>
                 <li>
-                    <h2><a href="{% url 'detalle_curso'  curso.id %}">{{ curso.nombre  }}</a></h2>
+                    <h2><a href="{% url 'detalle_curso'  curso.id %}">{{ curso.nombre  }} {{ curso.seccion  }}</a></h2>
                 </li>
             </ul>
         </div>
