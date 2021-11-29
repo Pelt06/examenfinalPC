@@ -1,0 +1,10 @@
+{% extends 'estudiantes/base.html' %}
+{% block content %}
+    <div class="post">
+        <h2><a href="#">{{ curso.nombre  }}</a></h2>
+        <h4>Estudiantes Asignados:</h4>
+        {% for actor in curso.actores.all %}
+        <p>{{actor}} </p> 
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'estudiantes/base.html' %}
+{% block content %}
+    {% for curso in cursos %}
+        <div class="post">
+            <ul>
+                <li>
+                    <h2><a href="{% url 'detalle_curso'  curso.id %}">{{ curso.nombre  }}</a></h2>
+                </li>
+            </ul>
+        </div>
+    {% endfor %}
+{% endblock %}
